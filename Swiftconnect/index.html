@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>SwiftConnect-Getting you connected</title>
+    <link rel="shortcut icon"  href="Images/swilo.jpeg">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    
+
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .gmap_canvas {overflow:hidden;
+        background:none!important;
+        height:400px;width:100%;
+      }
+      .mapouter{position:relative;
+        text-align:right;
+        height:400px;
+        width:100%;
+      }
+    .pd{
+      background-image: url(images/sw4.jpg);
+      background-size: cover;
+      background-color: transparent;
+    }
+      .ims{
+        width: 25%;
+        height: 25%
+      }
+      .ing{
+        border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+      }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+  <body class="bg-success text-light">
+    <ul class="nav justify-content-end bg-success fw-bold px-5">
+  <li class="nav-item">
+    <a class="nav-link active text-light" aria-current="page" href="#">Contact Us</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active text-light" href="#">Register</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-light" href="#">Login</a>
+  </li>
+</ul>
+ <nav class="navbar navbar-expand-lg navbar-dark bg-light fw-bold" aria-label="Offcanvas navbar large">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold px-3 text-success" href="#"><p>Swiftconnet</p></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Swiftconnect</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 ">
+            <li class="nav-item">
+              <a class="nav-link active text-muted" aria-current="page" href="index.html">Home</a>
+            </li>
+              <a class="nav-link active text-muted" aria-current="page" href="signup.html">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-muted" aria-current="page" href="about.html">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-muted" aria-current="page" href="https://facebook.com">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-muted" aria-current="page" href="login.html">Log in</a>
+            </li>
+          <form class="d-flex mt-3 mt-lg-0" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-secondary" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<main>
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+          <img src="images/sw1.jpeg" class="d-block w-100" bd-placeholder-imgwidth="100%" height="100%" alt="...">
+
+        <div class="container">
+          <div class="carousel-caption fw-bold text-start">
+            <h1>You are warmly welcome to <strong><a class="nav-link active" aria-current="" href="">Swiftconnect.Com.Ng</a></strong></h1>
+            <p>
+We are the most reliable and affordable platform to carry out your internet banking transactions, buy cheap data bundles and Airtime topup of any Nigerian network.We carry out transactions to all Banks in Nigeria and We offer the best price rates for Airtel, MTN, 9mobile and Glo data plans.</p>
+            <p><a class="btn btn-lg fw-bold btn-success" href="signup.html">Register</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/sw3.jpg" class="d-block w-100" bd-placeholder-imgwidth="100%" height="100%" alt="...">
+
+        <div class="container">
+          <div class="carousel-caption fw-bold text-start">
+            <h1>We are Reliable.</h1>
+            <p>Certify Bank is a fully optimized platform for reliability and dependability. You get 100% value for any transaction you carry with us.</p><p class="">
+             <p> <a class="btn btn-lg fw-bold btn-success" href="login.html">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+         <img src="images/sw4.jpg" class="d-block w-100" bd-placeholder-imgwidth="100%" height="100%" alt="...">
+        <div class="container">
+          <div class="carousel-caption fw-bold text-start">
+            <h1>BETTER SOLUTIONS FOR</h1>
+<h2>Automated Business</h2> 
+            <p>
+We are fully optimized platform for reliability and dependability. You get 100% value for any transaction you do with us..</p>
+             <p> <a class="btn btn-lg fw-bold btn-success" href="login.html">Login</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <img src="images/sw2.jpeg" class="img-fluid my-3 mx-auto d-block" alt="...">
+  <p class="text-center fw-bold fs-4">
+    Download Swiftconnect app
+  </p>
+  <a href=""><img src="images/swp.png" class="rounded mx-auto d-block" alt="...">
+</a>
+    <p class="text-center fw-bold fs-4 pt-3">
+    Our Partners
+  </p>
+    <marquee attribute_name = "attribute_value">
+   <div class="d-flex "> 
+    <img src="images/mtn.png" class="rounded mx-3 d-block ing" alt="...">
+    <img src="images/glo.png" class="rounded mx-3 d-block ing" alt="...">
+    <img src="images/airtel.png" class="rounded mx-3 d-block ing" alt="...">
+    <img src="images/9mobile.png" class="rounded mx-3 ing d-block" alt="...">
+    <img src="images/etisalat.png" class="rounded mx-3 d-block ing" alt="...">
+    <img src="images/spectranet.png" class="rounded mx-3 d-block ing" alt="...">
+    <img src="images/smile.png" class="rounded mx-3 d-block ing" alt="...">
+  </div>
+</marquee>
+  
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card">
+      <img src="images/swdat.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title fw-bold text-success">Data Bundle</h5>
+        <p class="card-text text-success">This is a longer <br>card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <a href="#" class="btn btn-outline-success">Buy now</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="images/swair.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title fw-bold text-success">Airtime</h5>
+        <p class="card-text text-success">This is a longer <br> card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <a href="#" class="btn btn-outline-success">Buy now</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col p-3">
+    <div class="card">
+      <img src="images/swcab.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title fw-bold text-success">Cable subscription</h5>
+        <p class="card-text text-success">This is a longer <br> card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <a href="#" class="btn btn-outline-success">Buy now</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="text-center fw-bold">
+  <h1>What we do</h1>
+  <p>
+We offer Internt Banking, Airtime Purchase, Databundle, CableTV (DStv, GOtv & Startimes), Electricity Bill Payemnt, Recharge Card Printing and so much more</p>
+</div>
+
+
+  <div class="container marketing">
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">We Have Better & Good Results</h2>
+        <p class="fw-bold">
+Certify Bank is a company registered with the corporate affair commission (with RC 16252) to provide top-notch web Transaction and ensure a fast payment avenue. Our services include but are not limited to Banking, Buying/Reselling of Cheap Data, Airtime, Electricity Bills Payment, Cable TV Subscription, Airtime to Cash Conversion, JAMB Services, WAEC, NECO, NABTEB Scratch cards.</p>
+      </div>
+      <div class="col-md-5">
+               <img src="images/swre.jpg" class="d-block w-100" bd-placeholder-imgwidth="100%" height="100%" alt="...">
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1">We are 100% secure</h2>
+        <p class="fw-bold"> 
+Your e-wallet is the safest, easiest and fastest means of carrying out transactions with us. Your funds are secured with us and can be kept for you for as long as you want</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img src="Images/swsc.jpg" class="d-block w-100" bd-placeholder-imgwidth="100%" height="100%" alt="...">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">Customer's Support <span class="text-muted"></h2>
+        <p class="fw-bold">
+Our customers are premium to us, hence satisfying them is our topmost priority. Our customer service is just a click away.</p>
+      </div>
+      <div class="col-md-5">
+         <img src="Images/swcs.jpg" class="d-block w-100" bd-placeholder-imgwidth="100%" height="100%" alt="...">
+
+      </div>
+    </div>
+   
+<div class="row">
+  <h1 class="text-center fw-bold my-3">Meet Our Team</h1>
+      <div class="col-lg-4">
+          <img src="images/swce.jpg" class="mx-auto d-block rounded-circle"width="140" height="140" alt="...">
+
+        <h2 class="fw-bold text-center">CEO </h2>
+        <p class="text-center">ABIOLA OLAOLOUWA C.</p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+      <img src="Images/swcf.jpg" class="mx-auto d-block rounded-circle"width="140" height="140" alt="...">
+
+        <h2 class="fw-bold text-center">CFO & FOUNDER</h2>
+        <p class="text-center">OLUTOYE ABIODUN T.</p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+       <img src="Images/swfd.jpg" class="mx-auto d-block rounded-circle"width="140" height="140" alt="...">
+
+        <h2 class="fw-bold text-center">CO FOUNDER</h2>
+        <p class="text-center">JEREMIAH OYENIRAN D.</p>
+      </div><!-- /.col-lg-4 -->
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+<!-- Three columns of text below the carousel -->
+    <div class="row bg-dark">
+      <div class="col-lg-4">
+          <img class=" rounded-circle mx-auto d-block" src="Images/swlo.png" width="140" height="140" alt="...">
+
+        <h2 class="fw-normal text-center">James</h2>
+        <p class="px-5"> I love Certify Bank, ever since I started using this website, I have been accumulating wealth because swift connect gives me the chance to do so, their rates are incomparable to any data selling website in Nigeria, try it and you will see that rere lolúwa.</p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+      <img src="Images/swlo.png" class="mx-auto d-block rounded-circle"width="140" height="140" alt="...">
+
+        <h2 class="fw-normal text-center">Habeebat</h2>
+        <p class="px-5">My name is Habeebat, I am a Trader. I have being using a lot of payment gateway but Certify is the best so far💯. Their Transaction is fast and the company-client relationship is at its peak. Thanks for making it easy for us to serve our customers better.</p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+       <img src="Images/swlo.png" class="mx-auto d-block rounded-circle"width="140" height="140" alt="...">
+
+        <h2 class="fw-normal text-center">Andrew</h2>
+        <p class="px-5">I love swift connect, ever since I started using this website, I have been accumulating wealth because swift connect gives me the chance to do so, their rates are incomparable to any data selling website in Nigeria, try it and you will see that rere lolúwa.</p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+     <div class="row text-success bg-light">
+      <h1 class="text-center fw-bold my-3">Result don't Lie</h1>
+      <div class="col-lg-4">
+          <img class=" rounded-circle mx-auto d-block" src="Images/swaw.svg" width="50" height="50" alt="...">
+
+        <h2 class="fw-normal text-center">Project</h2>
+        <p class="text-center fw-bold">2</p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+      <img src="Images/swba.svg" class="mx-auto d-block rounded-circle"width="50" height="50" alt="...">
+
+        <h2 class="fw-normal text-center">Transaction</h2>
+        <p class="text-center fw-bold">100,000+</p>
+       </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+       <img src="Images/swpe.svg" class="mx-auto d-block rounded-circle"width="50" height="50" alt="...">
+
+        <h2 class="fw-normal text-success text-center">Customers</h2>
+        <p class="text-center fw-bold">1000+</p>
+      </div><!-- /.col-lg-4 -->
+    </div>
+    <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=University of Oxford&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://piratebay-proxys.com/">Pirate proxy</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:400px;}.gmap_iframe {height:400px!important;}</style></div>
+
+    <footer class="py-3 bg-dark mt-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Contact us</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Privacy</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Our Service</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Blog</a></li>
+    </ul>
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+        <li class="ms-3"><a class="text-light" href="#"><img class="bg-light mx-3" height="24"width="24" src="images/swlo.png"></a></li>
+      </a>
+      <span class="mb-3 mb-md-0 text-light">© 2022 Swifconnect. All rights Reserved.</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3"><a class="text-light" href="#"><img class="bg-light mx-3" height="24"width="24" src="images/swfb.png"></a></li>
+      <li class="ms-3"><a class="text-light" href="#"><img class="bg-light mx-3" height="24"width="24" src="images/swwa.png"></a></li>
+      <li class="ms-3"><a class="text-light" href="#"><img class="bg-light mx-3" height="24"width="24" src="images/swca.png"></a></li>
+      <li class="ms-3"><a class="text-light" href="#"><img class="bg-light mx-3" height="24"width="24" src="images/swgm.png"></a></li>
+      <li class="ms-3"><a class="text-light" href="#"><img class="bg-light mx-3" height="24"width="24" src="images/swpl.png"></a></li>
+    </ul>
+  </footer>
+    <p class="text-center text-light">Power By<a class=" btn text-light"href="">Cyberhackit</a></p>
+  </footer>
+</main>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+      
+  </body>
+</html>
